@@ -152,7 +152,7 @@ namespace PrefabPainter.Editor {
             GameObject lNewPrefab = PrefabUtility.InstantiatePrefab( PrefabPainter.settings.selectedObject, ( obj.parentObject == null ) ? obj.transform : obj.parentObject ) as GameObject;
             lNewPrefab.tag = ( PrefabPainter.settings.painterTag != "Untagged" ) ? PrefabPainter.settings.painterTag : lNewPrefab.tag;
             OnInstance( PrefabPainterProcessor.ProcessStage.Before, lNewPrefab );
-            //lNewPrefab.transform.rotation = Quaternion.FromToRotation( lNewPrefab.transform.up, -lHitData.normal );
+            lNewPrefab.transform.rotation = Quaternion.FromToRotation( lNewPrefab.transform.up, lHitData.normal );
 
             lNewPrefab.transform.position = lHitData.point;
             OnPosition( PrefabPainterProcessor.ProcessStage.After, lNewPrefab );
