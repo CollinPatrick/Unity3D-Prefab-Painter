@@ -1,0 +1,36 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="Panel">
+        <ui:VisualElement name="BrushSettings" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-left-color: rgb(115, 115, 115); border-right-color: rgb(115, 115, 115); border-top-color: rgb(115, 115, 115); border-bottom-color: rgb(115, 115, 115); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-bottom: 7px;">
+            <ui:Label text="Brush" display-tooltip-when-elided="true" style="font-size: 15px; -unity-font-style: bold; -unity-text-align: middle-left; background-color: rgb(72, 72, 72); padding-left: 10px; padding-right: 10px; padding-top: 7px; padding-bottom: 7px; margin-bottom: 5px;" />
+            <ui:Slider picking-mode="Ignore" label="Brush Size" value="42" high-value="50" show-input-field="true" low-value="0.1" binding-path="brushSize" name="BrushSize" style="padding-right: 10px; padding-left: 10px; margin-left: 0; margin-right: 0; margin-top: 3px; margin-bottom: 3px;" />
+            <ui:Slider picking-mode="Ignore" label="Brush Weight" value="0.1" high-value="1" show-input-field="true" low-value="0.0001" name="BrushWeight" binding-path="brushWeight" style="padding-left: 10px; padding-right: 10px; margin-left: 0; margin-right: 0; margin-top: 3px; margin-bottom: 3px;" />
+            <ui:SliderInt picking-mode="Ignore" label="Max Objects" value="1" high-value="50" name="MaxObjects" show-input-field="true" low-value="1" binding-path="maxObjects" style="margin-left: 0; margin-right: 0; margin-top: 3px; margin-bottom: 3px; padding-left: 10px; padding-right: 10px;" />
+            <uie:PropertyField binding-path="ignoreLayers" label="Ignore Layers" name="IgnoreLayers" style="margin-top: 3px; margin-bottom: 3px; padding-left: 7px; padding-right: 6px;" />
+            <uie:TagField label="Painter Tag" value="PrefabPainterTemp" binding-path="painterTag" name="PainterTag" style="margin-left: 0; margin-right: 0; margin-top: 3px; margin-bottom: 3px; padding-left: 10px; padding-right: 10px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="RotationSettings" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-left-color: rgb(115, 115, 115); border-right-color: rgb(115, 115, 115); border-top-color: rgb(115, 115, 115); border-bottom-color: rgb(115, 115, 115); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-bottom: 7px;">
+            <ui:Label text="Rotation" display-tooltip-when-elided="true" style="font-size: 15px; -unity-font-style: bold; -unity-text-align: middle-left; padding-left: 10px; padding-right: 10px; padding-top: 7px; padding-bottom: 7px; background-color: rgb(72, 72, 72); margin-bottom: 5px;" />
+            <ui:Toggle label="Randomize Rotation?" name="RandomizeRotation" binding-path="randomizeRotation" style="margin-left: 0; margin-right: 0; margin-top: 3px; margin-bottom: 3px; padding-left: 10px; padding-right: 10px; padding-top: 0; padding-bottom: 0;" />
+            <ui:VisualElement name="ToggleRotationSettingsPanel">
+                <ui:MinMaxSlider picking-mode="Ignore" label="X Random Rotation" min-value="0" max-value="180" low-limit="0" high-limit="360" binding-path="xRandomRotation" name="RandomXRotationSlider" style="margin-left: 0; margin-right: 0; margin-top: 3px; margin-bottom: 3px; padding-right: 10px; padding-left: 10px;" />
+                <ui:MinMaxSlider picking-mode="Ignore" label="Y Random Rotation" min-value="0" max-value="180" low-limit="0" high-limit="360" binding-path="yRandomRotation" name="RandomYRotationSlider" style="margin-left: 0; margin-right: 0; margin-top: 3px; margin-bottom: 3px; padding-left: 10px; padding-right: 10px;" />
+                <ui:MinMaxSlider picking-mode="Ignore" label="Z Random Rotation" min-value="0" max-value="180" low-limit="0" high-limit="360" binding-path="zRandomRotation" name="RandomZRotationSlider" style="margin-left: 0; margin-right: 0; margin-top: 3px; margin-bottom: 3px; padding-left: 10px; padding-right: 10px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="ScaleSettings" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-left-color: rgb(115, 115, 115); border-right-color: rgb(115, 115, 115); border-top-color: rgb(115, 115, 115); border-bottom-color: rgb(115, 115, 115); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-bottom: 7px;">
+            <ui:Label text="Scale" display-tooltip-when-elided="true" style="font-size: 15px; -unity-font-style: bold; -unity-text-align: middle-left; margin-bottom: 7px; padding-left: 10px; padding-right: 10px; padding-top: 7px; padding-bottom: 7px; background-color: rgb(72, 72, 72);" />
+            <ui:Toggle label="Randomize Scale?" binding-path="randomizeScale" name="RandomizeScale" style="margin-left: 0; margin-right: 0; margin-top: 3px; margin-bottom: 3px; padding-left: 10px; padding-right: 10px;" />
+            <ui:VisualElement name="ToggleRandomizeScalePanel">
+                <ui:Toggle label="Uniform Scale?" binding-path="uniformScale" name="UniformScale" style="margin-left: 0; margin-right: 0; margin-top: 3px; margin-bottom: 3px; padding-left: 10px; padding-right: 10px;" />
+                <ui:VisualElement name="ToggleUniformScaleSettingsPanel">
+                    <ui:MinMaxSlider picking-mode="Ignore" label="Unform Random Scale" min-value="1" max-value="1.5" low-limit="0.1" high-limit="3" binding-path="uniformRandomScale" name="UniformXScale" style="margin-left: 0; margin-right: 0; margin-top: 3px; margin-bottom: 3px; padding-left: 10px; padding-right: 10px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="ToggleRandomScaleSettingsPanel">
+                    <ui:MinMaxSlider picking-mode="Ignore" label="X Random Scale" min-value="1" max-value="1.5" low-limit="0.1" high-limit="3" binding-path="xRandomScale" name="XRandomScale" style="margin-left: 0; margin-right: 0; margin-top: 3px; margin-bottom: 3px; padding-left: 10px; padding-right: 10px;" />
+                    <ui:MinMaxSlider picking-mode="Ignore" label="Y Random Scale" min-value="1" max-value="1.5" low-limit="0.1" high-limit="3" binding-path="yRandomScale" name="YRandomScale" style="margin-left: 0; margin-right: 0; margin-top: 3px; margin-bottom: 3px; padding-left: 10px; padding-right: 10px;" />
+                    <ui:MinMaxSlider picking-mode="Ignore" label="Z Random Scale" min-value="1" max-value="1.5" low-limit="0.1" high-limit="3" binding-path="zRandomScale" name="ZRandomScale" style="margin-left: 0; margin-right: 0; margin-top: 3px; margin-bottom: 3px; padding-left: 10px; padding-right: 10px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

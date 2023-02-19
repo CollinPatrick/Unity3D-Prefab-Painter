@@ -1,0 +1,31 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="MainContainer" style="flex-grow: 1; flex-shrink: 0; background-color: rgb(56, 56, 56); height: auto; flex-basis: auto; width: auto; max-height: 100%;">
+        <ui:VisualElement name="Root" style="width: auto; height: auto; flex-direction: row; min-height: auto; flex-grow: 1; flex-shrink: 0; flex-basis: auto; flex-wrap: wrap; max-height: 100%; align-items: flex-start;">
+            <ui:VisualElement name="PaintSettingsPanel" style="border-left-color: rgb(72, 72, 72); border-right-color: rgb(72, 72, 72); border-top-color: rgb(72, 72, 72); border-bottom-color: rgb(72, 72, 72); border-left-width: 0; border-right-width: 2px; border-top-width: 0; border-bottom-width: 0; width: 350px; max-width: none; height: 100px; min-height: auto; flex-grow: 0; flex-shrink: 1; min-width: auto; max-height: none; justify-content: flex-start;">
+                <ui:VisualElement name="Header" style="border-left-color: rgb(132, 132, 132); border-right-color: rgb(132, 132, 132); border-top-color: rgb(132, 132, 132); border-bottom-color: rgb(132, 132, 132); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; background-color: rgb(34, 34, 34); padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; flex-grow: 0; flex-shrink: 0;">
+                    <ui:Label text="Paint Settings" display-tooltip-when-elided="true" style="font-size: 25px; -unity-text-align: upper-left; background-color: rgba(34, 34, 34, 0); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                </ui:VisualElement>
+                <ui:ScrollView name="SettingsScrollView" vertical-scroller-visibility="Auto" horizontal-scroller-visibility="Hidden" style="flex-grow: 1; width: 100%; min-height: auto; flex-shrink: 1; max-height: none;" />
+                <ui:VisualElement name="PreviewContainer" style="align-items: center; flex-direction: row; justify-content: center; border-top-color: rgb(72, 72, 72); border-left-width: 0; border-right-width: 0; border-top-width: 2px; border-bottom-width: 0; background-color: rgb(0, 0, 0); border-left-color: rgb(72, 72, 72); border-right-color: rgb(72, 72, 72); border-bottom-color: rgb(72, 72, 72); flex-shrink: 0;">
+                    <ui:VisualElement name="PreviewImage" style="width: 150px; height: 150px; background-color: rgb(65, 65, 65);">
+                        <ui:Label text="asset_name" display-tooltip-when-elided="true" name="PreviewName" style="position: absolute; bottom: 0; left: 50%; right: 50%; -unity-text-align: upper-center;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="PrefabGroupsPanel" style="flex-shrink: 1; flex-grow: 1; height: auto; border-left-color: rgb(113, 113, 113); border-right-color: rgb(113, 113, 113); border-top-color: rgb(113, 113, 113); border-bottom-color: rgb(113, 113, 113); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; min-width: 300px;">
+                <ui:VisualElement name="Header" style="border-left-color: rgb(132, 132, 132); border-right-color: rgb(132, 132, 132); border-top-color: rgb(132, 132, 132); border-bottom-color: rgb(132, 132, 132); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; background-color: rgb(34, 34, 34); flex-shrink: 0;">
+                    <ui:Label text="Prefab Groups" display-tooltip-when-elided="true" style="font-size: 25px; -unity-text-align: upper-left; background-color: rgba(34, 34, 34, 0); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="Controls" style="background-color: rgb(72, 72, 72); flex-direction: row; padding-left: 10px; padding-right: 10px; padding-top: 7px; padding-bottom: 8px; -unity-text-align: upper-left; justify-content: center; flex-shrink: 0;">
+                    <ui:TextField picking-mode="Ignore" value="filler text" name="GroupNameField" style="width: 100%; max-width: 150px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
+                    <ui:Button text="Add" display-tooltip-when-elided="true" name="AddGroupButton" style="width: 75px; margin-left: 5px; margin-right: 5px; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                    <ui:Button text="Remove" display-tooltip-when-elided="true" name="RemoveGroupButton" style="width: 75px; margin-left: 5px; margin-right: 5px; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                    <ui:Button text="Add Page" display-tooltip-when-elided="true" name="AddPageButton" style="width: 75px; margin-left: 5px; margin-right: 5px; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: none;" />
+                    <ui:Button text="Remove Page" display-tooltip-when-elided="true" name="RemovePageButton" style="width: 100px; margin-left: 5px; margin-right: 5px; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: none;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="Tabs" style="flex-direction: row; background-color: rgba(0, 0, 0, 0); display: none;" />
+                <ui:ScrollView name="GroupsScrollView" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="AlwaysVisible" horizontal-page-size="0" style="flex-grow: 1; flex-shrink: 1; padding-top: 10px; padding-bottom: 0; padding-right: 10px; padding-left: 10px; flex-wrap: nowrap; width: auto; max-width: none; height: auto;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
