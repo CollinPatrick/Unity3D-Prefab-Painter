@@ -1,5 +1,7 @@
 # Unity3D-Prefab-Painter
-A tool for quickly creating, placing, and initializing prefabs in a scene 
+
+### A tool for quickly creating, placing, and initializing prefabs in a scene 
+
 ![image](https://user-images.githubusercontent.com/40306723/219966379-9972dd5b-fefd-4056-856c-642d7fda1f15.png)
 
 ## Setup
