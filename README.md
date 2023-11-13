@@ -99,7 +99,7 @@ public virtual Type typeFilter => typeof( Transform );
 
 Runs when a prefab is instanced. Passes the prefab and if this is before or after the internal instancing setup.  
 ```
-public virtual void OnIntance( ProcessStage aStage, GameObject aGameObject ) { }
+public virtual void OnInstance( ProcessStage aStage, GameObject aGameObject ) { }
 ```
 
 Runs when a prefab is positioned. Passes the prefab and if this is before or after the internal positioning.  
@@ -117,6 +117,6 @@ Runs when a prefab is scaled. Passes the prefab and if this is before or after t
 public virtual void OnScale( ProcessStage aStage, GameObject aGameObject ) { }
 ```
 
-### Using A Cusrom Processor
+### Using A Custom Processor
 To use a custom processor, attach it to the "Prefab Painter Object" in the scene then add it to the list of processors in the "Prefab Painter Controller" component.
 To stop using a processor, you can either remove it from the list or processors or optionally uncheck the "Is Enabled" flag on the processor component.
